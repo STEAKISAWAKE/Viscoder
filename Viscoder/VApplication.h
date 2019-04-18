@@ -1,5 +1,5 @@
 #pragma once
-#include <SDL/SDL.h>
+
 #include "VRender.h"
 
 class VApplication
@@ -10,6 +10,6 @@ public:
 
 	void Init();
 	void Shutdown();
-	void Render();
+	void Update();
 };
 

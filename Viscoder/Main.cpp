@@ -1,13 +1,50 @@
+#include "imgui.h"
+#include "imgui-SFML.h"
 
-#include <SDL/SDL.h>
-#include "VApplication.h"
+#include <SFML/Graphics/RenderWindow.hpp>
+#include <SFML/System/Clock.hpp>
+#include <SFML/Window/Event.hpp>
+#include <SFML/Graphics/CircleShape.hpp>
 
-VApplication App;
+int main()
+{
+	sf::RenderWindow window(sf::VideoMode(640, 480), "ImGui + SFML = <3");
+	window.setFramerateLimit(60);
+	ImGui::SFML::Init(window);
 
-int main(int argc, char** argv) {
+	sf::CircleShape shape(10.f);
+	shape.setFillColor(sf::Color::Green);
 
-	App.Init();
+	sf::Clock deltaClock;
+	while (window.isOpen()) {
+		sf::Event event;
+		while (window.pollEvent(event)) {
+			ImGui::SFML::ProcessEvent(event);
 
-	App.Shutdown();
+			if (event.type == sf::Event::Closed) {
+				window.close();
+			}
+		}
+
+		ImGui::SFML::Update(window, deltaClock.restart());
+
+
+		ImGui::Begin("Hello, world!");
+			ImGui::Button("Look at this pretty button");
+			ImGui::Text("Hello World!");
+		ImGui::End();
+
+		ImGui::Begin("Create Block");
+			ImGui::Button("Create Function");
+		ImGui::End();
+
+		window.clear();
+		window.draw(shape);
+		ImGui::SFML::Render(window);
+		window.display();
+	}
+
+	ImGui::SFML::Shutdown();
+
 	return 0;
 }
