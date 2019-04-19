@@ -139,6 +139,9 @@
     <ClCompile Include="imgui_widgets.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="VApplication.cpp" />
+    <ClCompile Include="VBlock.cpp" />
+    <ClCompile Include="VBlockManager.cpp" />
+    <ClCompile Include="VGui.cpp" />
     <ClCompile Include="VRender.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -150,7 +153,13 @@
     <ClInclude Include="imstb_textedit.h" />
     <ClInclude Include="imstb_truetype.h" />
     <ClInclude Include="VApplication.h" />
+    <ClInclude Include="VBlock.h" />
+    <ClInclude Include="VBlockManager.h" />
+    <ClInclude Include="VGui.h" />
     <ClInclude Include="VRender.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

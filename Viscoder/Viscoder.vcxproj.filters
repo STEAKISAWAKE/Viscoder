@@ -42,6 +42,15 @@
     <ClCompile Include="imgui_widgets.cpp">
       <Filter>Source Files\Imgui</Filter>
     </ClCompile>
+    <ClCompile Include="VGui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VBlock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VBlockManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="VApplication.h">
@@ -71,5 +80,17 @@
     <ClInclude Include="imstb_truetype.h">
       <Filter>Source Files\Imgui</Filter>
     </ClInclude>
+    <ClInclude Include="VGui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VBlock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VBlockManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>
