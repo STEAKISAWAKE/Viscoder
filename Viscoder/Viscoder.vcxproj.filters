@@ -27,8 +27,14 @@
     <ClCompile Include="VRender.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="imgui-SFML.cpp">
-      <Filter>Source Files\Imgui</Filter>
+    <ClCompile Include="VGui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VBlock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VBlockManager.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="imgui.cpp">
       <Filter>Source Files\Imgui</Filter>
@@ -42,14 +48,8 @@
     <ClCompile Include="imgui_widgets.cpp">
       <Filter>Source Files\Imgui</Filter>
     </ClCompile>
-    <ClCompile Include="VGui.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="VBlock.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="VBlockManager.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="imgui-SFML.cpp">
+      <Filter>Source Files\Imgui</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -59,11 +59,14 @@
     <ClInclude Include="VRender.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="imconfig-SFML.h">
-      <Filter>Source Files\Imgui</Filter>
+    <ClInclude Include="VGui.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="imgui-SFML.h">
-      <Filter>Source Files\Imgui</Filter>
+    <ClInclude Include="VBlock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VBlockManager.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="imgui.h">
       <Filter>Source Files\Imgui</Filter>
@@ -80,17 +83,20 @@
     <ClInclude Include="imstb_truetype.h">
       <Filter>Source Files\Imgui</Filter>
     </ClInclude>
-    <ClInclude Include="VGui.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="imconfig.h">
+      <Filter>Source Files\Imgui</Filter>
     </ClInclude>
-    <ClInclude Include="VBlock.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="imconfig-SFML.h">
+      <Filter>Source Files\Imgui</Filter>
     </ClInclude>
-    <ClInclude Include="VBlockManager.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="imgui-SFML.h">
+      <Filter>Source Files\Imgui</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />
+    <None Include="imgui.ini">
+      <Filter>Source Files\Imgui</Filter>
+    </None>
   </ItemGroup>
 </Project>

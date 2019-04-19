@@ -1,5 +1,5 @@
 #include "imgui.h"
-#include "imgui-SFML.h"
+
 
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/System/Clock.hpp>
@@ -21,6 +21,20 @@ int main()
 
 	ImGui::StyleColorsLight();
 
+	ImGui::CreateContext();
+	ImGuiIO& io = ImGui::GetIO(); (void)io;
+
+	io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;       // Enable Keyboard Controls
+	//io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
+	io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;           // Enable Docking
+	io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;         // Enable Multi-Viewport / Platform Windows
+	io.ConfigDockingWithShift = true;
+	//io.ConfigViewportsNoAutoMerge = true;
+	//io.ConfigViewportsNoTaskBarIcon = true;
+	//io.ConfigViewportsNoDefaultParent = true;
+	//io.ConfigDockingTabBarOnSingleWindows = true;
+	//io.ConfigDockingTransparentPayload = true;
+
 	while (window.isOpen()) {
 		sf::Event event;
 		while (window.pollEvent(event)) {
@@ -29,7 +43,7 @@ int main()
 			if (event.type == sf::Event::Closed) {
 				window.close();
 			}
-
+		
 			if (sf::Event::Resized) {
 				sf::FloatRect visibleArea(0, 0, window.getSize().x, window.getSize().y);
 				window.setView(sf::View(visibleArea));
@@ -41,6 +55,7 @@ int main()
 
 
 		VGui::GUI();
+		ImGui::ShowDemoWindow();
 
 		window.clear(sf::Color::White);
 		window.draw(shape);
