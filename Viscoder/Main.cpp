@@ -7,12 +7,18 @@
 #include <SFML/Graphics/CircleShape.hpp>
 
 #include "VGui.h"
+#include <Windows.h>
 
-int main()
+int main(int argc, char** argv)
 {
 	sf::RenderWindow window(sf::VideoMode(640, 480), "Viscoder");
+	ShowWindow(window.getSystemHandle(), SW_MAXIMIZE);
 	window.setFramerateLimit(60);
 	ImGui::SFML::Init(window);
+
+
+
+
 
 	sf::CircleShape shape(10.f);
 	shape.setFillColor(sf::Color::Green);
@@ -34,6 +40,8 @@ int main()
 	//io.ConfigViewportsNoDefaultParent = true;
 	//io.ConfigDockingTabBarOnSingleWindows = true;
 	//io.ConfigDockingTransparentPayload = true;
+
+	
 
 	while (window.isOpen()) {
 		sf::Event event;

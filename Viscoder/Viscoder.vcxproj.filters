@@ -9,10 +9,6 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="Source Files\Imgui">
       <UniqueIdentifier>{50f05de8-5e5b-403c-af25-5ea0613a9ae1}</UniqueIdentifier>
     </Filter>
@@ -22,12 +18,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="VApplication.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="VRender.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="VGui.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="VBlock.cpp">
@@ -94,7 +84,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="cpp.hint" />
     <None Include="imgui.ini">
       <Filter>Source Files\Imgui</Filter>
     </None>
